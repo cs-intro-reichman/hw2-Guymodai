@@ -10,7 +10,7 @@ public class Collatz {
             String sequence = "";
             int count = 1;
 
-            while(localSeed != 1) {
+            while(localSeed != 1 ||count ==1 ) {
                 sequence = sequence + localSeed + " ";
                 if(localSeed % 2 == 0)
 				{
