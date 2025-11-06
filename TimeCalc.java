@@ -18,7 +18,8 @@ public class TimeCalc {
         }
 
         hours = (hours + hoursToAdd) % 24;
+        
+        System.out.println(String.format("%02d:%02d", hours, minutes));
 
-        System.out.println(hours + ":" + minutes );
     }
 }

@@ -1,26 +1,32 @@
-// Demonstrates the Collatz conjecture.
 public class Collatz {
-	public static void main(String args[]) {
-	     int seed = Integer.parseInt(args[0]);
-		 String charinput =args[1] ;
-		 charinput = charinput.toUpperCase();
-		 String sequence = "";
-		 int counter = 1;
-		 while(seed!=1 || counter==1)
-			{
-				sequence = sequence + seed + " ";
-				if(seed%2==0)
+    public static void main(String args[]) {
+        int N = Integer.parseInt(args[0]);
+        String charinput = args[1].toUpperCase();
+        int Seed = N;
+
+        for(int i=1;i<=N;i++)
+		{
+			int localSeed = i;
+            String sequence = "";
+            int count = 1;
+
+            while(localSeed != 1) {
+                sequence = sequence + localSeed + " ";
+                if(localSeed % 2 == 0)
 				{
-					seed = seed/2;	
+					localSeed = localSeed / 2;	
 				}
-				else seed = seed *3 +1;
-				counter ++;
+                else 
+				{localSeed = localSeed * 3 + 1;}
+                count++;
+            }
+            sequence =sequence +  "1";
+            if(charinput.equals("V")) 
+			{
+				System.out.println(sequence + " (" + count + ")");
 			}
-	 	if(charinput.equals("S"))
-		 {
-			System.out.println(sequence + "1");
-		 }
-			System.out.println("Every one of the first " + counter + " hailstone sequences reached 1.");
-		 
+    	}
+		System.out.println("Every one of the first " + Seed + " hailstone sequences reached 1.");
 	}
 }
+
