@@ -1,3 +1,12 @@
+/*
+Feedback:
+Great work!
+Yam
+*/
+
+
+
+
 public class Collatz {
     public static void main(String args[]) {
         int N = Integer.parseInt(args[0]);
@@ -29,4 +38,5 @@ public class Collatz {
 		System.out.println("Every one of the first " + Seed + " hailstone sequences reached 1.");
 	}
 }
+
 
